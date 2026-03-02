@@ -1,49 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name - IT Professional</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #111;
-            color: #00ffcc;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 48px;
-        }
-        .box {
-            background: #222;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Rupert - IT Professional</title>
+
+<style>
+
+body{
+font-family:"Courier New", monospace;
+background:#000;
+color:#00ff00;
+text-shadow:0 0 5px #00ff00;
+text-align:center;
+margin:0;
+padding:40px;
+animation:flicker 6s infinite;
+position:relative;
+z-index:2;
+}
+
+/* PHOSPHOR FLICKER */
+
+@keyframes flicker{
+0%{opacity:1;}
+97%{opacity:1;}
+98%{opacity:.97;}
+99%{opacity:.99;}
+100%{opacity:1;}
+}
+
+/* MAP */
+
+.map{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+opacity:.08;
+}
+
+/* GRID */
+
+.grid{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(0,255,0,.07) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,0,.07) 1px, transparent 1px);
+background-size:80px 80px;
+pointer-events:none;
+z-index:1;
+}
+
+/* RADAR SWEEP */
+
+.radar{
+position:fixed;
+top:50%;
+left:50%;
+width:120vmax;
+height:120vmax;
+background:conic-gradient(
+rgba(0,255,0,.25),
+rgba(0,255,0,.1),
+rgba(0,255,0,0)
+);
+transform-origin:center;
+animation:sweep 10s linear infinite;
+opacity:.15;
+pointer-events:none;
+z-index:2;
+}
+
+@keyframes sweep{
+from{transform:translate(-50%,-50%) rotate(0deg);}
+to{transform:translate(-50%,-50%) rotate(360deg);}
+}
+
+/* CRT SCANLINES */
+
+.scanlines{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:repeating-linear-gradient(
+0deg,
+rgba(0,255,0,.05),
+rgba(0,255,0,.05) 1px,
+transparent 1px,
+transparent 3px
+);
+pointer-events:none;
+z-index:4;
+}
+
+/* NAV */
+
+nav{
+margin-bottom:30px;
+}
+
+nav a{
+color:#00ff00;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#66ff66;
+}
+
+/* PANELS */
+
+.box{
+border:1px solid #00ff00;
+padding:20px;
+margin:20px auto;
+max-width:800px;
+background:rgba(0,0,0,.7);
+}
+
+/* LINKS */
+
+a{color:#00ff00;}
+a:hover{color:#66ff66;}
+
+/* CURSOR */
+
+.cursor{
+display:inline-block;
+width:10px;
+background:#00ff00;
+margin-left:5px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+</style>
 </head>
+
 <body>
 
-    <h1>Your Name</h1>
-    <h2>Future Network / Cyber Professional</h2>
+<!-- WORLD MAP -->
 
-    <div class="box">
-        <h3>Certifications</h3>
-        <p>CompTIA A+</p>
-        <p>Network+</p>
-        <p>Security+</p>
-    </div>
+<svg class="map" viewBox="0 0 2000 1000" preserveAspectRatio="xMidYMid slice">
+<path d="M170 500 L300 420 L420 450 L560 410 L700 430 L820 400 L950 420 L1080 390 L1200 410 L1320 380 L1450 420 L1600 410"
+stroke="#00ff00" stroke-width="2" fill="none"/>
+<path d="M250 650 L420 620 L560 640 L720 610 L900 630 L1080 600 L1250 620 L1400 590"
+stroke="#00ff00" stroke-width="2" fill="none"/>
+</svg>
 
-    <div class="box">
-        <h3>Projects</h3>
-        <p>Built pfSense Firewall Lab</p>
-        <p>Configured VLAN Network with Aruba Switch</p>
-        <p>Active Directory Domain Setup</p>
-    </div>
+<div class="grid"></div>
+<div class="radar"></div>
+<div class="scanlines"></div>
 
-    <div class="box">
-        <h3>Contact</h3>
-        <p>Email: your@email.com</p>
-    </div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<h1>> NATHAN RUPERT<span class="cursor"></span></h1>
+<h2>> NETWORK & CYBERSECURITY PROFESSIONAL</h2>
+
+<div class="box" id="home">
+<h3>> WELCOME</h3>
+<p>Hello. I am Nathan Rupert, an aspiring IT professional specializing in networking and cybersecurity labs.</p>
+</div>
+
+<div class="box" id="about">
+<h3>> ABOUT ME</h3>
+<p>I am passionate about networking, system administration, and cybersecurity.</p>
+</div>
+
+<div class="box">
+<h3>> CERTIFICATIONS</h3>
+<p>CompTIA A+</p>
+<p>Network+</p>
+<p>Security+</p>
+</div>
+
+<div class="box" id="projects">
+
+<h3>> PROJECTS</h3>
+
+<p>
+<strong>pfSense Firewall Lab</strong><br>
+Simulated enterprise firewall environment.
+</p>
+
+<p>
+<strong>VLAN Network with Aruba Switch</strong><br>
+Configured VLAN segmentation and routing.
+</p>
+
+<p>
+<strong>Active Directory Domain Setup</strong><br>
+Windows Server domain environment.
+</p>
+
+</div>
+
+<div class="box" id="contact">
+<h3>> CONTACT</h3>
+<p>Email: <a href="mailto:nrupert22@email.com">nrupert22@email.com</a></p>
+</div>
+
+<footer>
+<p>> © 2026 Nathan Rupert | Cyber Portfolio</p>
+</footer>
 
 </body>
 </html>
