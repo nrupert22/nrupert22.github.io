@@ -11,35 +11,35 @@
 
 body {
     font-family: "Courier New", Courier, monospace;
-    background: #000;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
-    text-align: center;
-    margin: 0;
-    padding: 40px;
-    animation: flicker 6s infinite;
+    background:#000;
+    color:#00ff00;
+    text-shadow:0 0 5px #00ff00;
+    text-align:center;
+    margin:0;
+    padding:40px;
+    animation:flicker 6s infinite;
 }
 
 /* PHOSPHOR FLICKER */
 
-@keyframes flicker {
-    0% {opacity: 1;}
-    97% {opacity: 1;}
-    98% {opacity: 0.97;}
-    99% {opacity: 0.99;}
-    100% {opacity: 1;}
+@keyframes flicker{
+    0%{opacity:1;}
+    97%{opacity:1;}
+    98%{opacity:0.97;}
+    99%{opacity:0.99;}
+    100%{opacity:1;}
 }
 
 /* CRT SCANLINES */
 
-body::before {
-    content: "";
-    position: fixed;
+body::before{
+    content:"";
+    position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background: repeating-linear-gradient(
+    background:repeating-linear-gradient(
         0deg,
         rgba(0,255,0,0.04),
         rgba(0,255,0,0.04) 1px,
@@ -47,10 +47,10 @@ body::before {
         transparent 3px
     );
     pointer-events:none;
-    z-index:2;
+    z-index:3;
 }
 
-/* RADAR GRID */
+/* NORAD MAP BACKGROUND */
 
 body::after{
     content:"";
@@ -60,20 +60,34 @@ body::after{
     width:100%;
     height:100%;
     background-image:
-        linear-gradient(rgba(0,255,0,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,0,0.05) 1px, transparent 1px);
-    background-size: 80px 80px;
+
+    /* radar grid */
+    linear-gradient(rgba(0,255,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,0,0.05) 1px, transparent 1px),
+
+    /* world map */
+    url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
+
+    background-size:
+        80px 80px,
+        80px 80px,
+        cover;
+
+    background-position:center;
+    background-repeat:no-repeat;
+
+    opacity:0.08;
     pointer-events:none;
     z-index:1;
 }
 
 /* NAVIGATION */
 
-nav {
-    margin-bottom: 30px;
+nav{
+    margin-bottom:30px;
 }
 
-nav a {
+nav a{
     color:#00ff00;
     margin:0 15px;
     text-decoration:none;
@@ -91,6 +105,7 @@ nav a:hover{
     padding:20px;
     margin:20px auto;
     max-width:800px;
+    background:rgba(0,0,0,0.6);
 }
 
 /* LINKS */
@@ -103,7 +118,7 @@ a:hover{
     color:#66ff66;
 }
 
-/* BLINKING CURSOR */
+/* CURSOR */
 
 .cursor{
     display:inline-block;
@@ -121,10 +136,10 @@ a:hover{
 
 /* MOBILE */
 
-@media (max-width: 768px) {
-    body {
-        padding:20px;
-    }
+@media (max-width:768px){
+body{
+padding:20px;
+}
 }
 
 </style>
@@ -182,9 +197,7 @@ Windows Server domain environment.
 
 <div class="box" id="contact">
 <h3>> CONTACT</h3>
-
 <p>Email: <a href="mailto:nrupert22@email.com">nrupert22@email.com</a></p>
-
 </div>
 
 <footer>
