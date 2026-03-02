@@ -1,116 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - IT Professional</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #00ffcc;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-        }
-        h1 {
-            font-size: 48px;
-        }
-        h2 {
-            font-size: 24px;
-            color: #99ff99;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #00ffcc;
-            font-weight: bold;
-        }
-        .box {
-            background: #222;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-        }
-        .box a {
-            color: #00ffcc;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            background-color: #111;
-            color: #00ffcc;
-            padding: 10px 0;
-        }
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-            .box {
-                margin: 10px 0;
-                padding: 15px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Rupert - IT Professional</title>
+
+<style>
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #000000;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Navigation */
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #66ff66;
+}
+
+/* Headers */
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+/* Terminal boxes */
+
+.box {
+    background: #000000;
+    border: 1px solid #00ff00;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+/* Links */
+
+a {
+    color: #00ff00;
+}
+
+a:hover {
+    color: #66ff66;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+/* Blinking cursor */
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #00ff00;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
 
-    <h1>Your Name</h1>
-    <h2>Future Network / Cyber Professional</h2>
+<h1>> NATHAN RUPERT<span class="cursor"></span></h1>
+<h2>> NETWORK & CYBERSECURITY PROFESSIONAL</h2>
 
-    <!-- About Me Section -->
-    <div class="box" id="about">
-        <h3>About Me</h3>
-        <p>I am a passionate IT professional with a focus on network security and system administration. I am always learning and growing to stay ahead in the tech world!</p>
-    </div>
+<!-- HOME -->
 
-    <!-- Certifications Section -->
-    <div class="box" id="certifications">
-        <h3>Certifications</h3>
-        <p>CompTIA A+</p>
-        <p>Network+</p>
-        <p>Security+</p>
-    </div>
+<div class="box" id="home">
+<h3>> WELCOME</h3>
+<p>Hello. I am Nathan Rupert, an aspiring IT professional specializing in networking and cybersecurity. I build hands-on labs to develop real-world skills.</p>
+</div>
 
-    <!-- Projects Section -->
-    <div class="box" id="projects">
-        <h3>Projects</h3>
-        <p><strong>pfSense Firewall Lab:</strong> A virtualized lab using pfSense to simulate real-world networking environments. <a href="https://github.com/yourgithub" target="_blank">View on GitHub</a></p>
-        <p><strong>VLAN Network with Aruba Switch:</strong> Configured a network with VLANs for segmented traffic and enhanced security. <a href="https://github.com/yourgithub" target="_blank">View on GitHub</a></p>
-        <p><strong>Active Directory Domain Setup:</strong> Set up a Windows Server environment to simulate Active Directory for user and resource management. <a href="https://github.com/yourgithub" target="_blank">View on GitHub</a></p>
-    </div>
+<!-- ABOUT -->
 
-    <!-- Social Links Section -->
-    <div class="box">
-        <h3>Find Me On</h3>
-        <p>
-            <a href="https://www.linkedin.com/in/yourname" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-        </p>
-    </div>
+<div class="box" id="about">
+<h3>> ABOUT ME</h3>
+<p>I am a passionate IT professional focused on networking, security, and system administration. I enjoy building labs and experimenting with infrastructure to grow my technical skills.</p>
+</div>
 
-    <!-- Contact Section -->
-    <div class="box" id="contact">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    </div>
+<!-- SKILLS -->
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
-    </footer>
+<div class="box" id="skills">
+<h3>> SKILLS</h3>
+<p>Networking | VLAN Configuration | pfSense | Windows Server | Active Directory | Virtualization | Troubleshooting</p>
+</div>
+
+<!-- CERTIFICATIONS -->
+
+<div class="box" id="certifications">
+<h3>> CERTIFICATIONS</h3>
+<p>CompTIA A+</p>
+<p>Network+</p>
+<p>Security+</p>
+</div>
+
+<!-- PROJECTS -->
+
+<div class="box" id="projects">
+<h3>> PROJECTS</h3>
+
+<p>
+<strong>pfSense Firewall Lab</strong><br>
+Virtualized firewall lab simulating enterprise network security.<br>
+<a href="https://github.com/yourgithub" target="_blank">View on GitHub</a>
+</p>
+
+<p>
+<strong>VLAN Network with Aruba Switch</strong><br>
+Configured VLAN segmentation for secure network architecture.<br>
+<a href="https://github.com/yourgithub" target="_blank">View on GitHub</a>
+</p>
+
+<p>
+<strong>Active Directory Domain Setup</strong><br>
+Built a Windows Server domain with user and resource management.<br>
+<a href="https://github.com/yourgithub" target="_blank">View on GitHub</a>
+</p>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="box" id="contact">
+<h3>> CONTACT</h3>
+
+<p>Email: <a href="mailto:nrupert22@email.com">nrupert22@email.com</a></p>
+
+<p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+
+<p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+
+</div>
+
+<footer>
+<p>> © 2026 Nathan Rupert | IT & Cybersecurity Portfolio</p>
+</footer>
 
 </body>
 </html>
