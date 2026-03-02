@@ -1,42 +1,166 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Rupert - IT Professional</title>
 
-const text = `
-INITIALIZING SYSTEM...
-LOADING NETWORK MODULES...
-CHECKING SECURITY PROTOCOLS...
-ESTABLISHING TERMINAL SESSION...
+<style>
 
-ACCESS GRANTED
+/* BODY */
 
-WELCOME NATHAN RUPERT
-`;
+body {
+    font-family: "Courier New", Courier, monospace;
+    background: #000;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
 
-let i = 0;
-const speed = 35;
+/* CRT SCANLINES */
 
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("bootText").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    } 
-    else {
+body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,255,0,0.05),
+        rgba(0,255,0,0.05) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events:none;
+}
 
-        setTimeout(() => {
+/* NAVIGATION */
 
-            const boot = document.getElementById("boot");
+nav {
+    margin-bottom: 30px;
+}
 
-            boot.style.transition = "opacity 1s";
-            boot.style.opacity = "0";
+nav a {
+    color:#00ff00;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-            setTimeout(() => {
-                boot.style.display = "none";
-            }, 1000);
+nav a:hover{
+    color:#66ff66;
+}
 
-        }, 1500);
+/* TERMINAL PANELS */
+
+.box{
+    border:1px solid #00ff00;
+    padding:20px;
+    margin:20px auto;
+    max-width:800px;
+}
+
+/* LINKS */
+
+a{
+    color:#00ff00;
+}
+
+a:hover{
+    color:#66ff66;
+}
+
+/* BLINKING CURSOR */
+
+.cursor{
+    display:inline-block;
+    width:10px;
+    background:#00ff00;
+    margin-left:5px;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    body {
+        padding:20px;
     }
 }
 
-window.onload = typeWriter;
+</style>
+</head>
 
-</script>
+<body>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<h1>> NATHAN RUPERT<span class="cursor"></span></h1>
+<h2>> NETWORK & CYBERSECURITY PROFESSIONAL</h2>
+
+<div class="box" id="home">
+<h3>> WELCOME</h3>
+<p>Hello. I am Nathan Rupert, an aspiring IT professional specializing in networking and cybersecurity labs.</p>
+</div>
+
+<div class="box" id="about">
+<h3>> ABOUT ME</h3>
+<p>I am passionate about networking, system administration, and cybersecurity. I enjoy building lab environments and experimenting with infrastructure.</p>
+</div>
+
+<div class="box">
+<h3>> CERTIFICATIONS</h3>
+<p>CompTIA A+</p>
+<p>Network+</p>
+<p>Security+</p>
+</div>
+
+<div class="box" id="projects">
+
+<h3>> PROJECTS</h3>
+
+<p>
+<strong>pfSense Firewall Lab</strong><br>
+Simulated enterprise firewall environment.
+</p>
+
+<p>
+<strong>VLAN Network with Aruba Switch</strong><br>
+Configured VLAN segmentation and routing.
+</p>
+
+<p>
+<strong>Active Directory Domain Setup</strong><br>
+Windows Server domain environment.
+</p>
+
+</div>
+
+<div class="box" id="contact">
+<h3>> CONTACT</h3>
+
+<p>Email: <a href="mailto:nrupert22@email.com">nrupert22@email.com</a></p>
+
+</div>
+
+<footer>
+<p>> © 2026 Nathan Rupert | Cyber Portfolio</p>
+</footer>
+
+</body>
+</html>
