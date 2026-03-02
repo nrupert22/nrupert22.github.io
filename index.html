@@ -1,137 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Nathan Rupert | Cybersecurity Portfolio</title>
-
-<style>
-
-body{
-    margin:0;
-    background:black;
-    color:#00ff00;
-    font-family:Courier, monospace;
-    overflow-x:hidden;
-
-    text-shadow:
-        0 0 5px #00ff00,
-        0 0 10px #00ff00,
-        0 0 20px #00ff00;
-
-    animation:flicker .15s infinite;
-}
-
-/* CRT Scanlines */
-
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:repeating-linear-gradient(
-        0deg,
-        rgba(0,255,0,0.05),
-        rgba(0,255,0,0.05) 1px,
-        transparent 1px,
-        transparent 3px
-    );
-    pointer-events:none;
-    z-index:1000;
-}
-
-/* Flicker Effect */
-
-@keyframes flicker{
-    0%{opacity:.96;}
-    50%{opacity:1;}
-    100%{opacity:.97;}
-}
-
-/* Layout */
-
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px;
-}
-
-h1,h2{
-    border-bottom:1px solid #00ff00;
-    padding-bottom:5px;
-}
-
-a{
-    color:#00ff00;
-    text-decoration:none;
-}
-
-a:hover{
-    text-decoration:underline;
-}
-
-.cursor{
-    display:inline-block;
-    width:10px;
-    background:#00ff00;
-    margin-left:5px;
-    animation:blink 1s steps(1) infinite;
-}
-
-@keyframes blink{
-    50%{opacity:0;}
-}
-
-</style>
+    <title>Your Name - IT Professional</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #111;
+            color: #00ffcc;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        .box {
+            background: #222;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <h1>Your Name</h1>
+    <h2>Future Network / Cyber Professional</h2>
 
-<h1>Nathan Rupert</h1>
-<p>Cybersecurity | Network Security | Ethical Hacking<span class="cursor"></span></p>
+    <div class="box">
+        <h3>Certifications</h3>
+        <p>CompTIA A+</p>
+        <p>Network+</p>
+        <p>Security+</p>
+    </div>
 
-<h2>About</h2>
-<p>
-Cybersecurity enthusiast focused on network defense, vulnerability research,
-and penetration testing. Interested in defensive security, red teaming,
-and protecting infrastructure from real-world threats.
-</p>
+    <div class="box">
+        <h3>Projects</h3>
+        <p>Built pfSense Firewall Lab</p>
+        <p>Configured VLAN Network with Aruba Switch</p>
+        <p>Active Directory Domain Setup</p>
+    </div>
 
-<h2>Projects</h2>
-
-<p>
-<strong>Network Scanner</strong><br>
-A Python-based network scanner that identifies active hosts and open ports.
-</p>
-
-<p>
-<strong>Log Analyzer</strong><br>
-Tool for parsing system logs and identifying suspicious behavior.
-</p>
-
-<p>
-<strong>Packet Monitor</strong><br>
-Simple packet monitoring tool built to analyze network traffic.
-</p>
-
-<h2>Skills</h2>
-
-<p>
-Linux<br>
-Networking<br>
-Python<br>
-Penetration Testing<br>
-Security Analysis
-</p>
-
-<h2>Contact</h2>
-
-<p>Email: your@email.com</p>
-
-</div>
+    <div class="box">
+        <h3>Contact</h3>
+        <p>Email: your@email.com</p>
+    </div>
 
 </body>
 </html>
